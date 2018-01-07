@@ -1,0 +1,3 @@
+hot_read_article_homepage:
+    path:     /
+    defaults: { _controller: HotReadArticleBundle:Default:index }

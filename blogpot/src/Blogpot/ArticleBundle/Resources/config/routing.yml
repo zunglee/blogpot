@@ -1,3 +1,0 @@
-blogpot_article_homepage:
-    path:     /
-    defaults: { _controller: BlogpotArticleBundle:Default:home }

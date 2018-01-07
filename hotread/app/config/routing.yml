@@ -1,0 +1,4 @@
+hot_read_article:
+    resource: "@HotReadArticleBundle/Resources/config/routing.yml"
+    prefix: /
+
