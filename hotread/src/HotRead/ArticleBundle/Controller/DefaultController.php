@@ -9,7 +9,6 @@ class DefaultController extends Controller
 
     public function homeAction()
     {
-        
-        return $this->render('@HotReadArticle/Desktop/home.html.twig');
+        return $this->render('@HotReadArticle/Desktop/homepage.html.twig');
     }
 }
