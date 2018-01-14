@@ -1,4 +1,4 @@
-composer.lock
+
 ########### Netbeans working directory ##############
 nbproject/
 
@@ -6,7 +6,4 @@ nbproject/
 *~
 *.swp
 *.swo
-
-
-
-
+vendor/
