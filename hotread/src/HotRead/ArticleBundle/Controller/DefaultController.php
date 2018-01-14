@@ -7,9 +7,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
 
-    public function indexAction()
+    public function homeAction()
     {
-die('Here in the');      
-  return $this->render('HotReadArticleBundle:Default:index.html.twig');
+        
+        return $this->render('@HotReadArticle/Desktop/home.html.twig');
     }
 }
