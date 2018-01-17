@@ -104,16 +104,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // hot_read_article_homepage
-        if ('' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'HotRead\\ArticleBundle\\Controller\\DefaultController::homeAction',  '_route' => 'hot_read_article_homepage',);
-            if (substr($pathinfo, -1) !== '/') {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'hot_read_article_homepage'));
-            }
-
-            return $ret;
-        }
-
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

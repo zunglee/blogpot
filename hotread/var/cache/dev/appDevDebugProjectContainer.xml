@@ -19,6 +19,8 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="HotReadArticleBundle">HotRead\ArticleBundle\HotReadArticleBundle</parameter>
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
+      <parameter key="JMSDiExtraBundle">JMS\DiExtraBundle\JMSDiExtraBundle</parameter>
+      <parameter key="JMSAopBundle">JMS\AopBundle\JMSAopBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -75,6 +77,16 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/home/ankitesh/myGitPro/blogpot/hotread/vendor/symfony/assetic-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\AsseticBundle</parameter>
+      </parameter>
+      <parameter key="JMSDiExtraBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/ankitesh/myGitPro/blogpot/hotread/vendor/jms/di-extra-bundle</parameter>
+        <parameter key="namespace">JMS\DiExtraBundle</parameter>
+      </parameter>
+      <parameter key="JMSAopBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/ankitesh/myGitPro/blogpot/hotread/vendor/jms/aop-bundle</parameter>
+        <parameter key="namespace">JMS\AopBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -368,6 +380,8 @@
       <parameter>AppBundle</parameter>
       <parameter>HotReadArticleBundle</parameter>
       <parameter>AsseticBundle</parameter>
+      <parameter>JMSDiExtraBundle</parameter>
+      <parameter>JMSAopBundle</parameter>
       <parameter>DebugBundle</parameter>
       <parameter>WebProfilerBundle</parameter>
       <parameter>SensioDistributionBundle</parameter>
@@ -397,6 +411,29 @@
     <parameter key="assetic.cache.class">Assetic\Cache\FilesystemCache</parameter>
     <parameter key="assetic.use_controller_worker.class">Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker</parameter>
     <parameter key="assetic.request_listener.class">Symfony\Bundle\AsseticBundle\EventListener\RequestListener</parameter>
+    <parameter key="jms_di_extra.metadata.driver.annotation_driver.class">JMS\DiExtraBundle\Metadata\Driver\AnnotationDriver</parameter>
+    <parameter key="jms_di_extra.metadata.driver.configured_controller_injections.class">JMS\DiExtraBundle\Metadata\Driver\ConfiguredControllerInjectionsDriver</parameter>
+    <parameter key="jms_di_extra.metadata.driver.lazy_loading_driver.class">Metadata\Driver\LazyLoadingDriver</parameter>
+    <parameter key="jms_di_extra.service_naming_strategy.default.class">JMS\DiExtraBundle\Metadata\DefaultNamingStrategy</parameter>
+    <parameter key="jms_di_extra.metadata.metadata_factory.class">Metadata\MetadataFactory</parameter>
+    <parameter key="jms_di_extra.metadata.cache.file_cache.class">Metadata\Cache\FileCache</parameter>
+    <parameter key="jms_di_extra.metadata.converter.class">JMS\DiExtraBundle\Metadata\MetadataConverter</parameter>
+    <parameter key="jms_di_extra.controller_resolver.class">JMS\DiExtraBundle\HttpKernel\ControllerResolver</parameter>
+    <parameter key="jms_di_extra.controller_injectors_warmer.class">JMS\DiExtraBundle\HttpKernel\ControllerInjectorsWarmer</parameter>
+    <parameter key="jms_di_extra.all_bundles">false</parameter>
+    <parameter key="jms_di_extra.bundles" type="collection"/>
+    <parameter key="jms_di_extra.directories" type="collection"/>
+    <parameter key="jms_di_extra.cache_dir">/home/ankitesh/myGitPro/blogpot/hotread/var/cache/dev/jms_diextra</parameter>
+    <parameter key="jms_di_extra.disable_grep">false</parameter>
+    <parameter key="jms_di_extra.doctrine_integration">true</parameter>
+    <parameter key="jms_di_extra.annotation_patterns" type="collection">
+      <parameter>JMS\DiExtraBundle\Annotation</parameter>
+    </parameter>
+    <parameter key="jms_di_extra.cache_warmer.controller_file_blacklist" type="collection"/>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/ankitesh/myGitPro/blogpot/hotread/var/cache/dev/jms_diextra/doctrine/EntityManager_5a5e591148fc1.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5a5e591148fc1_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_aop.cache_dir">/home/ankitesh/myGitPro/blogpot/hotread/var/cache/dev/jms_aop</parameter>
+    <parameter key="jms_aop.interceptor_loader.class">JMS\AopBundle\Aop\InterceptorLoader</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -514,7 +551,7 @@
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_runsqldoctrinecommand">doctrine.query_sql_command</parameter>
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_updateschemadoctrinecommand">doctrine.schema_update_command</parameter>
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_validateschemacommand">doctrine.schema_validate_command</parameter>
-      <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">console.command.sensiolabs_security_command_securitycheckercommand</parameter>
+      <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">sensio_distribution.security_checker.command</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverruncommand">web_server.command.server_run</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstartcommand">web_server.command.server_start</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstopcommand">web_server.command.server_stop</parameter>
@@ -561,6 +598,7 @@
       <parameter key="doctrine.query_sql_command">true</parameter>
       <parameter key="doctrine.schema_update_command">true</parameter>
       <parameter key="doctrine.schema_validate_command">true</parameter>
+      <parameter key="sensio_distribution.security_checker.command">true</parameter>
       <parameter key="web_server.command.server_run">true</parameter>
       <parameter key="web_server.command.server_start">true</parameter>
       <parameter key="web_server.command.server_stop">true</parameter>
@@ -1880,8 +1918,7 @@
       </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
-      <tag name="monolog.logger" channel="request"/>
-      <argument type="service" id="debug.controller_resolver.inner"/>
+      <argument type="service" id="jms_di_extra.controller_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
       <argument type="service" id="debug.argument_resolver"/>
     </service>
@@ -3525,11 +3562,10 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="Doctrine\ORM\EntityManager" public="true" lazy="true">
-      <argument type="service" id="doctrine.dbal.default_connection"/>
-      <argument type="service" id="doctrine.orm.default_configuration"/>
-      <factory class="Doctrine\ORM\EntityManager" method="create"/>
-      <configurator service="doctrine.orm.default_manager_configurator" method="configure"/>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager5a5e591148fc1_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/home/ankitesh/myGitPro/blogpot/hotread/var/cache/dev/jms_diextra/doctrine/EntityManager_5a5e591148fc1.php</file>
+      <argument type="service" id="doctrine.orm.default_entity_manager.delegate"/>
+      <argument type="service" id="service_container"/>
     </service>
     <service id="doctrine.orm.default_entity_manager.metadata_factory" class="Doctrine\Common\Persistence\Mapping\ClassMetadataFactory" public="false">
       <factory service="doctrine.orm.default_entity_manager" method="getMetadataFactory"/>
@@ -3672,6 +3708,14 @@
         <argument>twig</argument>
       </call>
       <call method="addResource">
+        <argument type="service" id="assetic.twig_directory_resource.JMSDiExtraBundle"/>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service" id="assetic.twig_directory_resource.JMSAopBundle"/>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
         <argument type="service" id="assetic.twig_directory_resource.DebugBundle"/>
         <argument>twig</argument>
       </call>
@@ -3771,6 +3815,48 @@
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
       <tag name="container.hot_path"/>
     </service>
+    <service id="jms_di_extra.metadata.driver.annotation_driver" class="JMS\DiExtraBundle\Metadata\Driver\AnnotationDriver" public="false">
+      <argument type="service" id="annotations.cached_reader"/>
+      <argument type="service" id="jms_di_extra.service_naming_strategy.default"/>
+    </service>
+    <service id="jms_di_extra.service_naming_strategy.default" class="JMS\DiExtraBundle\Metadata\DefaultNamingStrategy" public="false"/>
+    <service id="jms_di_extra.metadata.driver.configured_controller_injections" class="JMS\DiExtraBundle\Metadata\Driver\ConfiguredControllerInjectionsDriver" public="false">
+      <argument type="service" id="jms_di_extra.metadata.driver.annotation_driver"/>
+    </service>
+    <service id="jms_di_extra.metadata.driver.lazy_loading_driver" class="Metadata\Driver\LazyLoadingDriver" public="false">
+      <argument type="service" id="service_container"/>
+      <argument>jms_di_extra.metadata_driver</argument>
+    </service>
+    <service id="jms_di_extra.metadata.cache.file_cache" class="Metadata\Cache\FileCache" public="false">
+      <argument>/home/ankitesh/myGitPro/blogpot/hotread/var/cache/dev/jms_diextra/metadata</argument>
+    </service>
+    <service id="jms_di_extra.metadata.metadata_factory" class="Metadata\MetadataFactory" public="true">
+      <argument type="service" id="jms_di_extra.metadata.driver.lazy_loading_driver"/>
+      <argument>Metadata\ClassHierarchyMetadata</argument>
+      <argument>true</argument>
+      <call method="setCache">
+        <argument type="service" id="jms_di_extra.metadata.cache.file_cache" on-invalid="ignore"/>
+      </call>
+    </service>
+    <service id="jms_di_extra.metadata.converter" class="JMS\DiExtraBundle\Metadata\MetadataConverter" public="true"/>
+    <service id="jms_di_extra.controller_resolver" class="JMS\DiExtraBundle\HttpKernel\ControllerResolver" public="false">
+      <tag name="monolog.logger" channel="request"/>
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="controller_name_converter"/>
+      <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
+    </service>
+    <service id="jms_di_extra.controller_injectors_warmer" class="JMS\DiExtraBundle\HttpKernel\ControllerInjectorsWarmer" public="false">
+      <tag name="kernel.cache_warmer"/>
+      <argument type="service" id="kernel"/>
+      <argument type="service" id="jms_di_extra.controller_resolver"/>
+      <argument type="collection"/>
+      <argument>false</argument>
+      <argument type="collection"/>
+    </service>
+    <service id="jms_aop.pointcut_container" class="JMS\AopBundle\Aop\PointcutContainer" public="true"/>
+    <service id="jms_aop.interceptor_loader" class="JMS\AopBundle\Aop\InterceptorLoader" public="true">
+      <argument type="service" id="service_container"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -3868,6 +3954,9 @@
     <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">
       <tag name="console.command"/>
       <argument type="service" id="sensio_distribution.security_checker"/>
+      <call method="setName">
+        <argument>security:check</argument>
+      </call>
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
@@ -3914,7 +4003,7 @@
       <argument type="collection"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id="service_locator.3wkzln9"/>
+      <argument type="service" id="service_locator.iv.jde6"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -3955,6 +4044,7 @@
         <argument key="doctrine:query:sql">doctrine.query_sql_command</argument>
         <argument key="doctrine:schema:update">doctrine.schema_update_command</argument>
         <argument key="doctrine:schema:validate">doctrine.schema_validate_command</argument>
+        <argument key="security:check">sensio_distribution.security_checker.command</argument>
         <argument key="server:run">web_server.command.server_run</argument>
         <argument key="server:start">web_server.command.server_start</argument>
         <argument key="server:stop">web_server.command.server_stop</argument>
@@ -3962,7 +4052,7 @@
         <argument key="server:log">web_server.command.server_log</argument>
       </argument>
     </service>
-    <service id="service_locator.3wkzln9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.iv.jde6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -4002,6 +4092,7 @@
         <argument key="doctrine.schema_update_command" type="service" id="doctrine.schema_update_command"/>
         <argument key="doctrine.schema_validate_command" type="service" id="doctrine.schema_validate_command"/>
         <argument key="security.command.user_password_encoder" type="service" id="security.command.user_password_encoder"/>
+        <argument key="sensio_distribution.security_checker.command" type="service" id="sensio_distribution.security_checker.command"/>
         <argument key="twig.command.debug" type="service" id="twig.command.debug"/>
         <argument key="twig.command.lint" type="service" id="twig.command.lint"/>
         <argument key="web_server.command.server_log" type="service" id="web_server.command.server_log"/>
@@ -4389,6 +4480,50 @@
         </argument>
       </argument>
     </service>
+    <service id="assetic.twig_directory_resource.JMSDiExtraBundle" class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+      <tag name="assetic.templating.twig"/>
+      <tag name="assetic.formula_resource" loader="twig"/>
+      <argument type="collection">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
+            <argument type="service" id="templating.loader.filesystem"/>
+            <argument>JMSDiExtraBundle</argument>
+            <argument>/home/ankitesh/myGitPro/blogpot/hotread/app/Resources/JMSDiExtraBundle/views</argument>
+            <argument>/\.[^.]+\.twig$/</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
+            <argument type="service" id="templating.loader.filesystem"/>
+            <argument>JMSDiExtraBundle</argument>
+            <argument>/home/ankitesh/myGitPro/blogpot/hotread/vendor/jms/di-extra-bundle/Resources/views</argument>
+            <argument>/\.[^.]+\.twig$/</argument>
+          </service>
+        </argument>
+      </argument>
+    </service>
+    <service id="assetic.twig_directory_resource.JMSAopBundle" class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+      <tag name="assetic.templating.twig"/>
+      <tag name="assetic.formula_resource" loader="twig"/>
+      <argument type="collection">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
+            <argument type="service" id="templating.loader.filesystem"/>
+            <argument>JMSAopBundle</argument>
+            <argument>/home/ankitesh/myGitPro/blogpot/hotread/app/Resources/JMSAopBundle/views</argument>
+            <argument>/\.[^.]+\.twig$/</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
+            <argument type="service" id="templating.loader.filesystem"/>
+            <argument>JMSAopBundle</argument>
+            <argument>/home/ankitesh/myGitPro/blogpot/hotread/vendor/jms/aop-bundle/Resources/views</argument>
+            <argument>/\.[^.]+\.twig$/</argument>
+          </service>
+        </argument>
+      </argument>
+    </service>
     <service id="assetic.twig_directory_resource.DebugBundle" class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
       <tag name="assetic.templating.twig"/>
       <tag name="assetic.formula_resource" loader="twig"/>
@@ -4507,16 +4642,17 @@
       <argument>/home/ankitesh/myGitPro/blogpot/hotread/app/Resources/views</argument>
       <argument>/\.[^.]+\.twig$/</argument>
     </service>
+    <service id="doctrine.orm.default_entity_manager.delegate" class="Doctrine\ORM\EntityManager" public="false" lazy="true">
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+      <argument type="service" id="doctrine.orm.default_configuration"/>
+      <factory class="Doctrine\ORM\EntityManager" method="create"/>
+      <configurator service="doctrine.orm.default_manager_configurator" method="configure"/>
+    </service>
     <service id="debug.validator.inner" class="Symfony\Component\Validator\Validator\ValidatorInterface" public="false">
       <factory service="validator.builder" method="getValidator"/>
     </service>
     <service id="debug.event_dispatcher.inner" class="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher" public="false">
       <argument type="service" id="service_container"/>
-    </service>
-    <service id="debug.controller_resolver.inner" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
-      <argument type="service" id="service_container"/>
-      <argument type="service" id="controller_name_converter"/>
-      <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
     <service id="debug.argument_resolver.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver" public="false">
       <argument type="service" id="argument_metadata_factory"/>
@@ -4732,19 +4868,22 @@
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
     <service id="assetic.value_supplier" alias="assetic.value_supplier.default" public="false"/>
+    <service id="jms_di_extra.service_naming_strategy" alias="jms_di_extra.service_naming_strategy.default"/>
+    <service id="jms_di_extra.metadata_driver" alias="jms_di_extra.metadata.driver.annotation_driver" public="true"/>
+    <service id="jms_di_extra.metadata.cache" alias="jms_di_extra.metadata.cache.file_cache" public="false"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_containscommand" alias="doctrine_cache.contains_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_deletecommand" alias="doctrine_cache.delete_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_flushcommand" alias="doctrine_cache.flush_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_statscommand" alias="doctrine_cache.stats_command" public="true"/>
-    <service id="console.command.sensiolabs_security_command_securitycheckercommand" alias="sensio_distribution.security_checker.command" public="true"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
+    <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>
     <service id="service_locator._fpuy7b" alias="2_ServiceLocator~bc_t6nd" public="false"/>
     <service id="service_locator.ml7rum7" alias="1_ServiceLocator~rqgpxuf" public="false"/>
     <service id="validator" alias="debug.validator" public="true"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
-    <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>
+    <service id="debug.controller_resolver.inner" alias="jms_di_extra.controller_resolver" public="false"/>
     <service id="argument_resolver" alias="debug.argument_resolver" public="false"/>
     <service id="security.access.decision_manager" alias="debug.security.access.decision_manager" public="false"/>
   </services>

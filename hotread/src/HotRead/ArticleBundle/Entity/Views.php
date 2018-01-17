@@ -24,9 +24,9 @@ class VIEWS
     /**
      * @var int
      *
-     * @ORM\Column(name="ARTICLE_ID", type="integer", unique=true)
+     * @ORM\Column(name="ARTICLE_INFO_ID", type="integer", unique=true)
      */
-    private $articleId;
+    private $articleInfoId;
     
     /**
      * @var int
@@ -44,32 +44,15 @@ class VIEWS
     {
         return $this->id;
     }
-
-
-    /**
-     * Set ArticleId
-     *
-     * @param int $articleId
-     *
-     */
-    public function setArticleId($articleId)
-    {
-        $this->articleId = $articleId;
+    function getArticleInfoId() {
+        return $this->articleInfoId;
     }
 
-    /**
-     * get ArticleId
-     *
-     * @param int ArticleId
-     *
-     */
-    public function getArticleId()
-    {
-        return $this->articleId ;
+    function setArticleInfoId($articleInfoId) {
+        $this->articleInfoId = $articleInfoId;
     }
-    
-    
-    /**
+
+        /**
      * Set viewCount
      *
      * @param int $viewCount
